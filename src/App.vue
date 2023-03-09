@@ -2,18 +2,17 @@
   <v-app>
     <v-main>
       <HelloWorld/>
+      <AllUsers/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AllUsers from './modules/excel/pages/AllUsers.vue'
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    AllUsers
   },
 
   data: () => ({
