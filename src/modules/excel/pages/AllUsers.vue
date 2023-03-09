@@ -3,8 +3,7 @@
         <v-row class="text-center">
             <v-col cols="12">
                 <h2>Mostrar usuarios</h2>
-                <v-icon icon="mdi-vuetify"></v-icon>
-
+                {{ users }}
             </v-col>
         </v-row>
     </v-container>
@@ -19,14 +18,14 @@ export default {
     },
 
     data: () => ({
-        users: null
+        users: null,
+        cadena: ""
     }),
 
     created() {
-        axios.get("18.224.73.103/api/users")
-            .then((result) => {
-                this.users = result;
-            })
+        axios.get("http://18.224.73.103/api/users").then((result) => {
+            this.users = result.data
+        })
     }
 }
 </script>
